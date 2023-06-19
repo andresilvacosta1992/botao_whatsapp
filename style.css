@@ -1,0 +1,58 @@
+.btn-whatsapp a {
+
+	color:#fff; 
+	text-decoration:none; 
+	display:block; 
+}
+
+.btn-whatsapp {
+    
+
+    background-color:rgb(37, 211, 102); 
+    width:60px; height:60px; 
+    text-align:center; 
+    line-height:58px; 
+    font-size:1.8em; 
+    color:#ffffff; 
+    font-weight:100; 
+    border-radius:50%; 
+}
+/*posicionamento*/
+.btn-whatsapp {
+
+    position:fixed; 
+    right:50%; 
+    bottom:30px; 
+    transform: translate(-50%, -50%);  
+}
+
+.btn-whatsapp:before,
+.btn-whatsapp:after
+
+
+{
+
+	content: '';
+    display:block;
+    position: absolute;
+    border-radius:50%;
+    border:1px solid #25d366;
+   left: -20px;
+    right: -20px;
+    bottom: -20px;
+    top: -20px;
+    animation: animate 1.5s linear infinite;
+    opacity:0;
+    backface-visibility:hidden;    
+}
+
+.pulsaDelay:after { animation-delay: .5s; }
+
+@keyframes animate {
+
+
+   0%   { transform: scale(0.5); opacity:0; }
+   50%  { opacity:1; }
+   100% { transform: scale(1.2); opacity:0; }
+
+}
